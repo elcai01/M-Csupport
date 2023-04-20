@@ -70,6 +70,21 @@
         <section style="text-align: left;">
         <h2>Contacto</h2>
         <p>Ponte en contacto con nosotros para cualquier duda o sugerencia.</p>
+                <form action="sumbit.php" method="post">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="question">Pregunta:</label>
+          <textarea id="question" name="question" rows="5" required></textarea>
+          
+          <input type="submit" value="Enviar">
+        </form>
+        <form action="submit-form.php" method="post">
+          <!-- ... Campos del formulario ... -->
+        </form>
         <ul>
           <li>Teléfono: 123-456-7890</li>
           <li>Email: tecnologia2643@gmail.com</li>
