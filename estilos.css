@@ -1,0 +1,12 @@
+/* Estilos para el título principal */
+h1 {
+  color: red;
+  font-size: 36px;
+}
+
+/* Estilos para el párrafo */
+p {
+  color: black;
+  font-size: 24px;
+  margin-top: 20px;
+}

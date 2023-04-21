@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Homepage - Semantic</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="background.css">
+  <link rel="stylesheet" href="semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+
+  </style>
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="../dist/components/visibility.js"></script>
+  <script src="../dist/components/sidebar.js"></script>
+  <script src="../dist/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <div class="right item">
+        </div>
+      </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        M&C Tecnología y Soporte
+      </h1>
+      <h2>En Tecnología y Soporte M&C ofrecemos servicios de asistencia técnica en línea para todo tipo de dispositivos electrónicos. Contamos con un equipo de profesionales capacitados para solucionar problemas de hardware y software en computadoras, laptops, smartphones, tablets.</h2>
+    </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Soporte</h3>
+          <p>Ofrecemos soporte técnico en línea para solucionar problemas con tus dispositivos electrónicos. Contáctanos a través de nuestra página web o redes sociales para recibir asistencia.</p>
+          <h3 class="ui header">le damos vida a la tecnología</h3>
+          <p>si, es correcto, como misión tenemos la capacidad de brindar soporte y en caso de ser requerido, repotenciación de los distintos equipos tecnológicos, los cuales pueden pensarse que están obsoletos.</p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="C:/Users/Edwin Caicedo/Documents/Página Web/logo.jpg" class="ui large bordered rounded image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>¿Por qué elegirnos?</h3>
+          <p>Brindamos un servicio de calidad y excelencia, soportado por estudios orientados al mantenimiento y reparación de dispositivos electrónicos.</p>
+        </div>
+        <div class="column">
+          <h3>"Debería ir con algún competidor."</h3>
+          <p>
+            <img src="avatar.jpg" class="ui avatar image"> <b></b>solo nosotros brindamos soluciones marca ACME 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Contacto</h3>
+      <p>Ponte en contacto con nosotros para cualquier duda o sugerencia.</p>
+      <h4 class="ui horizontal header divider">
+        <ul>        
+            <li>Email: tecnologia2643@gmail.com</li>
+            <li>Redes sociales:</li>
+            <button class="ui facebook button">
+              <i class="facebook icon"></i>
+              <a href="https://web.facebook.com/profile.php?id=100092306371372" target="_white">Sígueme en Facebook</a>
+            </button>
+              <button class="ui whatsapp button">
+                <i class="whatsapp icon"></i>
+              WhatsApp  
+            <li><a href="https://wa.me/573204592533?text=Hola%20quiero%20contactar%20contigo%20por%20WhatsApp" target="_blank">Contáctame por WhatsApp Opcion 1</a>
+            <li><a href="https://wa.me/573502607076?text=Hola%20quiero%20contactar%20contigo%20por%20WhatsApp" target="_blank">Contáctame por WhatsApp Opcion 2</a>
+          </ul>
+      </h4>
+      <h3 class="ui header">¿Haz oido sobre nuestra efectividad?</h3>
+      <p>Con mas de 4 años en experiencia de campo, brindamos soluciones con alta efectividad.</p>
+    </div>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <div class="ui inverted link list">
+          </div>
+        </div>
+        <div class="three wide column">
+          <div class="ui inverted link list">
+          </div>
+        </div>
+        <div class="seven wide column">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
