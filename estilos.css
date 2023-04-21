@@ -10,3 +10,6 @@ p {
   font-size: 24px;
   margin-top: 20px;
 }
+.ui.facebook.button a {
+  color: white;
+}
