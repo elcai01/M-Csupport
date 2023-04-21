@@ -13,3 +13,9 @@ p {
 .ui.facebook.button a {
   color: white;
 }
+.ui.whatsapp.button a {
+  color: white;
+}
+.ui.whatsapp.button {
+  background-color: green;
+}
